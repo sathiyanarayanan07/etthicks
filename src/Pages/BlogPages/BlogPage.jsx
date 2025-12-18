@@ -18,7 +18,7 @@ function Blogs() {
 
   const fetchBlogs = async () => {
     try {
-      const response = await fetch("http://localhost:1337/api/blogs?populate=*");
+      const response = await fetch("https://etthicks.thirdvizion.com/api/blogs?populate=*");
       const result = await response.json();
       setBlogs(result.data);
       setLoading(false);
