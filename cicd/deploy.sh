@@ -1,22 +1,27 @@
 #!/bin/bash
 set -e
 
+# ================================
+# CONFIG
+# ================================
 SERVER_USER="thirdvizion-etthicks"
 SERVER_HOST="213.210.21.150"
 DEPLOY_DIR="/home/thirdvizion-etthicks/htdocs/etthicks.thirdvizion.com"
-DIST_DIR="../dist"
+PROJECT_ROOT=".."
 
-echo "🚀 Deploying dist folder (keeping dist directory)"
+echo "🚀 Deploying FULL project to server"
+echo "➡ Target: ${SERVER_USER}@${SERVER_HOST}:${DEPLOY_DIR}"
 
-# Validate dist exists
-if [ ! -d "$DIST_DIR" ]; then
-  echo "❌ dist folder not found"
-  exit 1
-fi
-
-# IMPORTANT: NO trailing slash on dist
+# ================================
+# DEPLOY (FULL PROJECT)
+# ================================
 rsync -avz --delete \
-${DIST_DIR} \
+--exclude ".git" \
+--exclude "node_modules" \
+--exclude "dist" \
+--exclude ".env.local" \
+--exclude ".DS_Store" \
+${PROJECT_ROOT}/ \
 ${SERVER_USER}@${SERVER_HOST}:${DEPLOY_DIR}
 
-echo "✅ dist folder deployed successfully"
+echo "✅ Full project deployed successfully"
