@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Onest:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Onest:wght@100..900&family=Waterfall&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "tailwindcss";
+
+
+
+/* Hide scrollbar but keep scrolling */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  /* IE & Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari */
+}
+
+
+
+.font-worksans {
+  font-family: "Work Sans", sans-serif;
+}
+
+.font-onest {
+  font-family: "Onest", sans-serif;
+}
+
+.font-nunito {
+  font-family: "Nunito", sans-serif;
+}
+
+.font-waterfall {
+  font-family: "Waterfall", cursive;
+}
+
+
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  display: inline-block;
+  min-width: 100%;
+  animation: marquee 12s linear infinite;
+}
+
+
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll-text {
+  animation: scrollText 40s linear infinite;
+  display: flex;
+  align-items: center;
+}
+
+.animate-scroll-text:hover {
+  animation-play-state: paused;
+}
+
+
+
+
+
+
+/* @keyframes paddingGrow {
+  from {
+    padding-top: -120px;
+    padding-bottom: 0;
+  }
+
+  to {
+    padding-top: 5.5rem;
+    padding-bottom: 5.5rem;
+  }
+}
+
+@keyframes top-text {
+  from {
+    transform: translateY(-150px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes bottom-text {
+  from {
+    transform: translateY(150px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+} */
+
+@keyframes center-text {
+  from {
+    opacity: 0;
+  }
+
+  to {
+
+    opacity: 1;
+  }
+}
+
+
+/* Mobile (below md breakpoint ~768px) */
+@media (max-width: 767px) {
+  @keyframes paddingGrow {
+    from {
+      padding-top: -80px;
+      padding-bottom: 0;
+    }
+
+    to {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+  }
+
+  @keyframes top-text {
+    from {
+      transform: translateY(-100px);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(40px);
+      opacity: 1;
+    }
+  }
+
+  @keyframes bottom-text {
+    from {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(-40px);
+      opacity: 1;
+    }
+  }
+}
+
+/* Tablet (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  @keyframes paddingGrow {
+    from {
+      padding-top: -100px;
+      padding-bottom: 0;
+    }
+
+    to {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+  }
+
+  @keyframes top-text {
+    from {
+      transform: translateY(-120px);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(15px);
+      opacity: 1;
+    }
+  }
+
+  @keyframes bottom-text {
+    from {
+      transform: translateY(120px);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(-15px);
+      opacity: 1;
+    }
+  }
+}
+
+/* Large desktop (above 1280px) */
+@media (min-width: 1024px) and (max-width: 1420px) {
+  @keyframes paddingGrow {
+    from {
+      padding-top: -140px;
+      padding-bottom: 0;
+    }
+
+    to {
+      padding-top: 5.5rem;
+      padding-bottom: 5.5rem;
+    }
+  }
+
+  @keyframes top-text {
+    from {
+      transform: translateY(-180px);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+
+  @keyframes bottom-text {
+    from {
+      transform: translateY(180px);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+}
+
+
+/* Large desktop (above 1280px) */
+@media (min-width: 1440px) {
+  @keyframes paddingGrow {
+    from {
+      padding-top: -140px;
+      padding-bottom: 0;
+    }
+
+    to {
+      padding-top: 7.5rem;
+      padding-bottom: 7.5rem;
+    }
+  }
+
+  @keyframes top-text {
+    from {
+      transform: translateY(-180px);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+
+  @keyframes bottom-text {
+    from {
+      transform: translateY(180px);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+}
